@@ -83,9 +83,8 @@ selected_countries = st.multiselect('Select countries', options=all_countries, d
 
 ### P2.4 ###
 # replace with st.selectbox
-cancer_types = df['Cancer'].unique().tolist()  # Assuming df is your DataFrame
-selected_cancer = st.selectbox('Select a cancer type', options=cancer_types)  # Cancer type dropdown
-
+cancer = "Malignant neoplasm of stomach"
+subset = subset[subset["Cancer"] == cancer]
 ### P2.4 ###
 
 
