@@ -85,7 +85,7 @@ subset = subset[subset['Country'].isin(selected_countries)]
 cancer_types = df['Cancer'].unique().tolist()
 selected_cancer = st.selectbox('Select a cancer type', options=cancer_types, index=cancer_types.index("Malignant neoplasm of stomach"))
 cancer = "Malignant neoplasm of stomach"
-subset = subset[subset["Cancer"] == cancer]
+subset = subset[subset["Cancer"] == selected_cancer]
 ### P2.4 ###
 
 
