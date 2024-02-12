@@ -83,10 +83,8 @@ selected_countries = st.multiselect('Select countries', options=all_countries, d
 
 ### P2.4 ###
 # replace with st.selectbox
-cancer_types = df['Cancer'].unique().tolist()
-default_index = cancer_types.index("Malignant neoplasm of stomach") if "Malignant neoplasm of stomach" in cancer_types else 0
-selected_cancer = st.selectbox('Select a cancer type', options=cancer_types, index=default_index)
-subset = subset[subset['Cancer'] == selected_cancer]
+cancer = "Malignant neoplasm of stomach"
+subset = subset[subset["Cancer"] == cancer]
 ### P2.4 ###
 
 
