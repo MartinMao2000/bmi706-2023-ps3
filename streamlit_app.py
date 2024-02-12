@@ -54,8 +54,10 @@ subset = df[df["Year"] == year]
 
 
 ### P2.2 ###
-# replace with st.radio
-sex = "M"
+# Add a radio button for sex selection
+sex = st.radio("Select Sex", ('M', 'F'))  # 'M' and 'F' are the options for male and female
+
+# Filter the subset based on the selected sex
 subset = subset[subset["Sex"] == sex]
 ### P2.2 ###
 
