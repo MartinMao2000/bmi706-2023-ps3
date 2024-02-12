@@ -101,14 +101,14 @@ ages = [
     "Age >64",
 ]
 
-chart = alt.Chart(subset).mark_bar().encode(
-    x=alt.X("Age", sort=ages),
-    y=alt.Y("Rate", title="Mortality rate per 100k"),
-    color="Country",
-    tooltip=["Rate"],
-).properties(
-    title=f"{cancer} mortality rates for {'males' if sex == 'M' else 'females'} in {year}",
-)
+# chart = alt.Chart(subset).mark_bar().encode(
+#     x=alt.X("Age", sort=ages),
+#     y=alt.Y("Rate", title="Mortality rate per 100k"),
+#     color="Country",
+#     tooltip=["Rate"],
+# ).properties(
+#     title=f"{cancer} mortality rates for {'males' if sex == 'M' else 'females'} in {year}",
+# )
 
 # Heatmap chart code
 chart = alt.Chart(subset).mark_rect().encode(
