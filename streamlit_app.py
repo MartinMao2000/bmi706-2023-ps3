@@ -109,6 +109,17 @@ chart = alt.Chart(subset).mark_bar().encode(
 ).properties(
     title=f"{cancer} mortality rates for {'males' if sex == 'M' else 'females'} in {year}",
 )
+
+# Heatmap chart code
+chart = alt.Chart(subset).mark_rect().encode(
+    x=alt.X("Age:O", sort=ages),
+    y=alt.Y("Country:N"),
+    color=alt.Color("Rate:Q", scale=alt.Scale(type="log", domain=(0.01, 1000), clamp=True)),
+    tooltip=["Country", "Age", "Rate"],
+).properties(
+    title=f"{selected_cancer} mortality rates for {'males' if sex == 'M' else 'females'} in {year}",
+)
+
 ### P2.5 ###
 
 st.altair_chart(chart, use_container_width=True)
