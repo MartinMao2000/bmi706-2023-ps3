@@ -82,6 +82,8 @@ subset = subset[subset['Country'].isin(selected_countries)]
 
 ### P2.4 ###
 # replace with st.selectbox
+cancer_types = df['Cancer'].unique().tolist()
+selected_cancer = st.selectbox('Select a cancer type', options=cancer_types, index=cancer_types.index("Malignant neoplasm of stomach"))
 cancer = "Malignant neoplasm of stomach"
 subset = subset[subset["Cancer"] == cancer]
 ### P2.4 ###
@@ -91,7 +93,7 @@ subset = subset[subset["Cancer"] == cancer]
 ages = [
     "Age <5",
     "Age 5-14",
-    "Age 15-24",
+    "Age 15-24",   
     "Age 25-34",
     "Age 35-44",
     "Age 45-54",
