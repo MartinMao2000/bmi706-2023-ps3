@@ -75,9 +75,8 @@ countries = [
     "Turkey",
 ]
 all_countries = df['Country'].unique().tolist()
-selected_countries = st.multiselect('Select countries', options=all_countries, default=[
-    "Austria", "Germany", "Iceland", "Spain", "Sweden", "Thailand", "Turkey"
-])
+selected_countries = st.multiselect('Select countries', options=all_countries, default=countries)
+subset = subset[subset['Country'].isin(selected_countries)]
 ### P2.3 ###
 
 
