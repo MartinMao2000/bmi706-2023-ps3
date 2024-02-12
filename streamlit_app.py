@@ -43,8 +43,14 @@ st.write("## Age-specific cancer mortality rates")
 
 ### P2.1 ###
 # replace with st.slider
-year = 2012
+# Create a slider for selecting the year
+year = st.slider('Select a year', 1994, 2020, 2012)  # Default value is 2012
+
+# Filter the DataFrame based on the selected year
 subset = df[df["Year"] == year]
+
+# Display the filtered DataFrame
+st.write(subset)
 ### P2.1 ###
 
 
